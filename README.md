@@ -18,7 +18,7 @@ An MVP full-stack application for creating, organising, and AI-summarising notes
 ## System Architecture
 The application follows a decoupled client-server architecture:
 * **Client Layer:** A React SPA handles state management and UI interactions. It uses the Supabase client for secure authentication (JWT) and calls the backend REST API for all data operations.
-* **API & AI Layer:** The FastAPI server acts as a secure middleware layer. It validates user sessions, processes CRUD requests, and orchestrates prompts to the Google Gemini 2.0 API, ensuring AI logic and API keys are kept entirely server-side.
+* **API & AI Layer:** The FastAPI server acts as a secure middleware layer. It validates user sessions, processes CRUD requests, and orchestrates prompts to the Google Gemini 2.5 API, ensuring AI logic and API keys are kept entirely server-side.
 * **Data Layer:** Supabase provides the PostgreSQL database. Row Level Security (RLS) policies are implemented to guarantee that users can only read, update, or archive their own private data.
 
 ---
@@ -173,7 +173,7 @@ To ensure the application is running correctly, perform the following tests:
 
 - 🔐 **Supabase Auth** – Email/password login and signup
 - 📝 **Notes CRUD** – Create, read, update, archive notes
-- 🤖 **AI Summary** – Generate summary + action items via Gemini 2.0
+- 🤖 **AI Summary** – Generate summary + action items via Gemini 2.5
 - 🌓 **Dark Mode** – Seamless Tailwind CSS theme toggling for a premium UX
 - 📝 **Markdown Support** – Native markdown parsing with a dedicated Preview tab
 - 🔍 **Client-side search** – Filter by title, content, or tag
