@@ -1,0 +1,28 @@
+# Local env files
+.env
+*.env
+.env.local
+.env.*.local
+
+# Dependency directories
+node_modules/
+.venv/
+env/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE and System files
+.vscode/
+.idea/
+.DS_Store
+._*
+
+# Build outputs
+dist/
+build/
+out/
