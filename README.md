@@ -1,5 +1,7 @@
 # NoteAI – AI-Powered Notes Workspace
 
+⚠️ **Evaluation Notice:** This repository is proprietary and provided strictly for technical evaluation purposes. Commercial use, reproduction, or internal deployment of this code is strictly prohibited.
+
 An MVP full-stack application for creating, organising, and AI-summarising notes — built with FastAPI, React 18, Supabase, and Google Gemini.
 
 ---
