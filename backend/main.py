@@ -14,6 +14,7 @@ app = FastAPI(
     title="AI Notes Workspace API",
     version="1.0.0",
     description="Backend for the AI-powered notes workspace MVP.",
+    root_path="/api"
 )
 
 # ---------------------------------------------------------------------------
