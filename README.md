@@ -155,6 +155,31 @@ To ensure the application is running correctly, perform the following tests:
 
 ---
 
+## 🚀 Deployment (Vercel Monorepo)
+
+This repository is fully configured to deploy both the React frontend and the FastAPI backend together on **Vercel** as a single full-stack application, eliminating CORS issues.
+
+1. **Deploying on Vercel:**
+   - Import this GitHub repository into your Vercel dashboard.
+   - Leave the Framework Preset and Root Directory as their defaults. Vercel will automatically read the included `vercel.json` file.
+   - It will build the Vite frontend as a static site and deploy the Python backend as Vercel Serverless Functions.
+
+2. **Environment Variables:**
+   Add the following variables in your Vercel Project Settings > Environment Variables:
+   - `SUPABASE_URL`
+   - `SUPABASE_ANON_KEY`
+   - `SUPABASE_SERVICE_ROLE_KEY`
+   - `GOOGLE_API_KEY`
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY`
+   - `VITE_API_BASE_URL` *(Must be set exactly to `/api`)*
+
+3. **Routing Architecture:**
+   - The frontend is served at the root `/`.
+   - All backend API endpoints are securely routed to the relative path `/api/*` via Vercel's Edge Network rewrites.
+
+---
+
 ## 5. API Reference
 
 | Method | Endpoint                           | Auth | Description                   |
